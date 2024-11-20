@@ -1,5 +1,5 @@
 const request = require('supertest');
-const server = require('../index.js'); // Імпортуємо ваш Express-додаток
+const server = require('../index.js');
 
 afterAll(() => {  
   server.close();

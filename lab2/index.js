@@ -9,6 +9,8 @@ app.get('/products/:productId', (req, res) => {
     });
 });
 const PORT = 3005;
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+
+module.exports = server;
