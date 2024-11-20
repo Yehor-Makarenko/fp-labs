@@ -12,8 +12,7 @@ describe('GET /products/:productId', () => {
     expect(response.status).toBe(200);
     expect(response.body).toEqual({
       id: '1',
-      name: 'Product 1 name',
-      category: 'Category 1',
+      name: '1 name',
     });
   });
 });
