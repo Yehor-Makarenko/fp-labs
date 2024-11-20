@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 app.get('/products/:productId', (req, res) => {
+    const a = 5;
+    const b = 7;
     const productId = req.params.productId;
     
     res.json({
