@@ -49,11 +49,11 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: test-report
-          path: lab2/reports/jest/junit.xml
+          path: reports/jest/junit.xml
 
       - name: Publish test results
         uses: dorny/test-reporter@v1
         with:
           name: Jest Tests
-          path: lab2/reports/jest/junit.xml
+          path: reports/jest/junit.xml
           reporter: jest-junit
