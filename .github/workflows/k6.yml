@@ -24,6 +24,9 @@ jobs:
       - name: Run tests locally
         run: k6 run lab4/test.js --out json=lab4/results/test_results.json
 
+      - name: Auth token
+        run: k6 login cloud --token b6f2007a1520635e917f7299caaf3f44b644e6eb95478a4ca7504ea76a95977a
+
       - name: Run tests on cloud
         run: k6 run lab4/test.js --out=cloud
 
