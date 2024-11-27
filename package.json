@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "k6": "k6 run lab4/test.js --out json=lab4/results/test_results.json",    
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
