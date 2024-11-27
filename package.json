@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "k6": "k6 run lab4/test.js --out json=lab4/results/test_results.json",    
+    "k6": "k6 run lab4/test.js --out json=lab4/results/test_results.json",
+    "k6cloud": "k6 run --out=cloud lab4/test.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "prom-client": "^15.1.3"
   }
 }

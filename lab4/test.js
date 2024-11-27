@@ -5,15 +5,15 @@ export const options = {
   scenarios: {
     constant_vus: {
       executor: 'constant-vus',
-      vus: 50,
+      vus: 20,
       duration: '10s'
     },
     ramping_vus: {
       executor: 'ramping-vus',
       stages: [
-        { duration: '5s', target: 10 },
-        { duration: '5s', target: 30 },    
-        { duration: '5s', target: 60 }, 
+        { duration: '5s', target: 5 },
+        { duration: '5s', target: 10 },    
+        { duration: '5s', target: 30 }, 
       ]
     },
     constant_request_rate: {
@@ -21,7 +21,7 @@ export const options = {
       rate: 20,
       timeUnit: '1s',
       duration: '10s',
-      preAllocatedVUs: 50,
+      preAllocatedVUs: 5,
     },
   },
 };
