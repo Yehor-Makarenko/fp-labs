@@ -24,7 +24,7 @@ jobs:
       - name: Run app
         run: |
           npm install
-          node lab4/index.js
+          node lab4/index.js &
 
       - name: Run tests locally
         run: k6 run lab4/test.js --out json=lab4/results/test_results.json
