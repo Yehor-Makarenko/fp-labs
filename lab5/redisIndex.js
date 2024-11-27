@@ -34,8 +34,7 @@ client.connect().then(() => {
     })
     console.log(product)
   
-    // Зберігаємо в Redis
-    client.setEx(productId, 3600, JSON.stringify(product)); // TTL 1 година
+    client.setEx(productId, 3600, JSON.stringify(product));
   
     res.json({
       source: 'server',
@@ -44,14 +43,10 @@ client.connect().then(() => {
     }); 
   });
 
-  app.use('/static', express.static('lab5/public'));  // Де 'public' — це папка, що містить ваші статичні файли
+  app.use('/static', express.static('lab5/public'));
   
   const PORT = process.env.PORT;
   app.listen(PORT, () => {
       console.log(`Server is running on port ${PORT}`);
   });
 })
-
-// client.on('error', (err) => {
-//   console.log('Redis error: ' + err);
-// });
