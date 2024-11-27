@@ -21,6 +21,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install k6
 
+      - name: Run app
+        run: |
+          npm install
+          node lab4/index.js
+
       - name: Run tests locally
         run: k6 run lab4/test.js --out json=lab4/results/test_results.json
 
@@ -29,6 +34,10 @@ jobs:
 
       - name: Run tests on cloud
         run: k6 run lab4/test.js --out=cloud
+
+      - name: Stop server
+        run: kill $(lsof -t -i:3000)
+      
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
